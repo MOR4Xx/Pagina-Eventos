@@ -210,6 +210,7 @@ section {
 
 .frame-contato {
   display: flex;
+  flex-wrap: wrap;
   padding: 2vh 2vw;
 }
 
@@ -221,6 +222,14 @@ section {
   color: #E3E0D9;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-height: 60vh;
+  overflow: scroll;
+}
+
+.formulario form{
+  display: inline-block;
+  align-items: center;
 }
 
 .formulario h2 {
@@ -298,3 +307,9 @@ footer {
 }
 
 /* Responsividade */
+
+@media (max-width: 768px) {
+  .frame-contato{
+    flex-direction: column;
+  }
+}
