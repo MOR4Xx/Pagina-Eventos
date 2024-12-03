@@ -21,7 +21,7 @@ section {
 
 /* Header */
 
-.header {
+#header {
   display: flex;
   justify-content: space-between;
   background-color: rgba(132, 125, 125, 0.5);
@@ -86,9 +86,17 @@ section {
   display: flex;
   width: 100%;
   height: 100vh;
-  background: url(../img/foto-principal.jpg) center/cover;
+  background: url(/img/foto-principal.jpg) center/cover;
   background-attachment: fixed;
   scroll-margin-top: 5vh;
+}
+
+.apresentacao{
+  display: flex;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* Serviços */
