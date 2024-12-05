@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.header');
-  const apresentacaoSection = document.querySelector('#apresentacao');
+const images = [
+    'img/imagem1.jpeg',
+    'img/imagem2.jpg',
+    'img/imagem3.jpeg',
+    'img/imagem4.jpeg',
+];
 
-  window.addEventListener('scroll', () => {
-    const sectionTop = apresentacaoSection.getBoundingClientRect().top;
-    const sectionBottom = apresentacaoSection.getBoundingClientRect().bottom;
-    const viewportHeight = window.innerHeight;
+const carrosselElement = document.getElementById('apresentacao');
 
-    if (sectionTop < viewportHeight && sectionBottom > 0) {
-      header.style.opacity = '0';
-      header.style.pointerEvents = 'none';
-    } else {
-      header.style.opacity = '1';
-      header.style.pointerEvents = 'auto';
-    }
-  });
-});
+let index = 0;
+
+function carrossel() {
+    carrosselElement.style.background = `url('${images[index]}') center/cover`;
+    index = (index + 1) % images.length;
+}
+
+carrossel();
+setInterval(carrossel, 5000);
